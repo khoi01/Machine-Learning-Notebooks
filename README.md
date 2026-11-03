@@ -14,6 +14,8 @@
     Notebooks from the Machine Learning Specialization
     <br />
     <!-- IMPORTANT NOTE: If you want to append emojis you'll need to add the '-' sign before and after the header, as shown below:  -->
+    <a href="#-environment-">Environment</a>
+    ·
     <a href="#-modules-">Modules</a>
     ·
     <a href="#-license-">License</a>
@@ -40,6 +42,40 @@ by AI visionary Andrew Ng.
   - Implement a content-based deep learning method  
   - Build a deep reinforcement learning model  
 
+
+## 🐳 Environment 🐳
+
+Run the notebooks in Jupyter via Docker. Requires [Docker](https://docs.docker.com/get-docker/) and Docker Compose.
+
+### First time
+
+Build the image and start Jupyter (this may take several minutes while dependencies install):
+
+```bash
+docker compose up --build
+```
+
+Then open [http://localhost:8888](http://localhost:8888).
+
+### Second time (and later)
+
+Reuse the existing image — no rebuild needed:
+
+```bash
+docker compose up
+```
+
+Open [http://localhost:8888](http://localhost:8888) again.
+
+Stop the container with `Ctrl+C`, or run `docker compose down` in another terminal.
+
+Rebuild only after changing `Dockerfile` or `requirements.txt`:
+
+```bash
+docker compose up --build
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Modules 🚀
 

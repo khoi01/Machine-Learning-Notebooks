@@ -1,0 +1,14 @@
+services:
+  jupyter:
+    build: .
+    container_name: ml-notebooks
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    environment:
+      - PYTHONUNBUFFERED=1
+    # Keep the container lightweight; no GPU / extra services
+    stdin_open: true
+    tty: true
